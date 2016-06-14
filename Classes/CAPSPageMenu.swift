@@ -88,9 +88,9 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
     
     // MARK: - Properties
     
-    let menuScrollView = UIScrollView()
-    let controllerScrollView = UIScrollView()
-    var controllerArray : [UIViewController] = []
+    public let menuScrollView = UIScrollView()
+    public let controllerScrollView = UIScrollView()
+    public var controllerArray : [UIViewController] = []
     var menuItems : [MenuItemView] = []
     var menuItemWidths : [CGFloat] = []
     
@@ -105,8 +105,8 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
     
     var selectionIndicatorView : UIView = UIView()
     
-    var currentPageIndex : Int = 0
-    var lastPageIndex : Int = 0
+    public var currentPageIndex : Int = 0
+    public var lastPageIndex : Int = 0
     
     public var selectionIndicatorColor : UIColor = UIColor.whiteColor()
     public var selectedMenuItemLabelColor : UIColor = UIColor.whiteColor()
