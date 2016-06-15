@@ -456,7 +456,7 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
         if useMenuLikeSegmentedControl {
             selectionIndicatorFrame = CGRectMake(0.0, menuHeight - selectionIndicatorHeight, self.view.frame.width / CGFloat(controllerArray.count), selectionIndicatorHeight)
         } else if menuItemWidthBasedOnTitleTextWidth {
-            selectionIndicatorFrame = CGRectMake(0, menuHeight - selectionIndicatorHeight, menuItemWidths[0], selectionIndicatorHeight)
+            selectionIndicatorFrame = CGRectMake(0, menuHeight - selectionIndicatorHeight, menuItemWidths[0] + menuMargin, selectionIndicatorHeight)
         } else {
             if centerMenuItems  {
                 selectionIndicatorFrame = CGRectMake(startingMenuMargin + menuMargin, menuHeight - selectionIndicatorHeight, menuItemWidth, selectionIndicatorHeight)
