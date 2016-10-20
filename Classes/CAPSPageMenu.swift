@@ -95,7 +95,7 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
     var menuItemWidths : [CGFloat] = []
 
     public var menuHeight : CGFloat = 34.0
-    public var menuMargin : CGFloat = 15.0
+    public var menuMargin : CGFloat = 0.0
     public var menuItemWidth : CGFloat = 111.0
     public var selectionIndicatorHeight : CGFloat = 3.0
     var totalMenuItemWidthIfDifferentWidths : CGFloat = 0.0
@@ -730,14 +730,8 @@ public class CAPSPageMenu: UIViewController, UIScrollViewDelegate, UIGestureReco
                     }
                 }
 
-                selectionIndicatorWidth += 10
-                selectionIndicatorX -= 5
-
                 if pageIndex == 0 {
-                    selectionIndicatorWidth += selectionIndicatorX
-					selectionIndicatorX = 0
-				}else if pageIndex == self.controllerArray.count - 1 {
-					selectionIndicatorWidth = self.menuScrollView.contentSize.width - selectionIndicatorX
+					selectionIndicatorX = self.menuMargin
 				}
 
                 self.selectionIndicatorView.frame = CGRectMake(selectionIndicatorX, self.selectionIndicatorView.frame.origin.y, selectionIndicatorWidth, self.selectionIndicatorView.frame.height)
